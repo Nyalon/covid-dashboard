@@ -40,7 +40,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
       
       var layout = {
         title: 'Covid Cases & DOW - Correlation',
-        yaxis: {title: 'Dow Price'},
+        yaxis: {title: 'Covid Cases'},
         showlegend: true,
             legend: {
             x: 100,
@@ -48,7 +48,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
             y: 100
                 },
         yaxis2: {
-          title: 'Covid Cases',
+          title: 'Dow Price',
           titlefont: {color: 'rgb(148, 103, 189)'},
           tickfont: {color: 'rgb(148, 103, 189)'},
           overlaying: 'y',
