@@ -52,7 +52,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
 });
 
 // creating dropdown
-var drop = ['goog_Close', 'ba_Close', 'dji_Close']
+var drop = ['goog', 'ccl', 'zm', 'ba', 'dji']
 function dropDown() {
       var sel = d3.select('#selDataset');
       drop.forEach((id) => {
