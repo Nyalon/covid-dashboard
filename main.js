@@ -7,7 +7,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
         return date.World;
     })
     var close = dowData.map((date) => {
-        return date.dji;
+        return date.goog;
     })
     var usa = dowData.map((date) => {
         return date.USA;
@@ -23,7 +23,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
       var trace2 = {
         x: dates,
         y: close,
-        name: 'DOW',
+        name: 'Stock',
         yaxis: 'y2',
         type: 'scatter'
       };
@@ -31,7 +31,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
       var data = [trace1, trace2];
       
       var layout = {
-        title: 'Covid Cases & DOW - Correlation',
+        title: 'Covid Cases & Stock - Correlation',
         yaxis: {title: 'Covid Cases'},
         showlegend: true,
             legend: {
@@ -40,7 +40,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
             y: 100
                 },
         yaxis2: {
-          title: 'Dow Price',
+          title: 'Stock Price',
           titlefont: {color: 'rgb(148, 103, 189)'},
           tickfont: {color: 'rgb(148, 103, 189)'},
           overlaying: 'y',
@@ -52,7 +52,7 @@ d3.csv("dow_data.csv").then(function(dowData) {
 });
 
 // creating dropdown
-var drop = ['goog', 'ccl', 'zm', 'ba', 'dji']
+var drop = ['dji', 'goog', 'ccl', 'zm', 'ba']
 function dropDown() {
       var sel = d3.select('#selDataset');
       drop.forEach((id) => {
@@ -122,7 +122,7 @@ function gplot(id) {
             y: 100
                 },
         yaxis2: {
-          title: 'Dow Price',
+          title: 'Stock Price',
           titlefont: {color: 'rgb(148, 103, 189)'},
           tickfont: {color: 'rgb(148, 103, 189)'},
           overlaying: 'y',
