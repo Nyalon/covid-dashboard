@@ -1,1 +1,1 @@
-# covid-graph
+# covid-behavioral-impacts
