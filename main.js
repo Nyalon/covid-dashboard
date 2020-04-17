@@ -1,4 +1,4 @@
-d3.csv("dow_data.csv").then(function(dowData) {
+d3.csv("assets/data/dow_data.csv").then(function(dowData) {
 
     var dates = dowData.map((date) => {
         return date.Date;
