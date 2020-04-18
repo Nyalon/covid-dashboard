@@ -1,4 +1,4 @@
-d3.csv("assets/data/dow_data.csv").then(function(dowData) {
+d3.csv("dow_data.csv").then(function(dowData) {
 
     var dates = dowData.map((date) => {
         return date.Date;
@@ -23,7 +23,7 @@ d3.csv("assets/data/dow_data.csv").then(function(dowData) {
       var trace2 = {
         x: dates,
         y: close,
-        name: 'Stock',
+        name: 'Stock Price',
         yaxis: 'y2',
         type: 'scatter'
       };
